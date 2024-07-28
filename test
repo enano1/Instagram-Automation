@@ -1,7 +1,0 @@
-import selenium
-import pandas
-import webdriver_manager
-
-print("Selenium version:", selenium.__version__)
-print("Pandas version:", pandas.__version__)
-print("Webdriver Manager version:", webdriver_manager.__version__)
