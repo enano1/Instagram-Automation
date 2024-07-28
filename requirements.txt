@@ -1,5 +1,13 @@
 selenium
+<<<<<<< HEAD
+pandas
+webdriver-manager
+=======
 beautifulsoup4
 requests
+<<<<<<< HEAD
 webdriver-manager
 pandas
+=======
+>>>>>>> refs/remotes/origin/main
+>>>>>>> refs/remotes/origin/main

@@ -16,7 +16,6 @@ def login_instagram(username, password):
         chrome_options = Options()
         print("Service and Options initialized.")
         
-        # Initialize the Chrome WebDriver with the service and options
         driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
         print("WebDriver initialized.")
         driver.get('https://www.instagram.com/accounts/login/')
@@ -29,9 +28,9 @@ def login_instagram(username, password):
         password_input.send_keys(password)
         password_input.send_keys(Keys.RETURN)
         
-        time.sleep(5)  # Wait for the login process to complete
+        time.sleep(5)  
         
-        # Check if 2FA is required
+        # to check if 2FA is required
         try:
             two_fa_input = driver.find_element(By.NAME, 'verificationCode')
             two_fa_code = input("Enter the 2FA code: ")
@@ -41,7 +40,7 @@ def login_instagram(username, password):
         except NoSuchElementException:
             print("2FA not required or already completed.")
         
-        # Wait for the main page to load after login
+        # wait for the main page to load after login
         time.sleep(5)
         if "accounts/login" in driver.current_url:
             print("Login failed, please check your credentials.")
